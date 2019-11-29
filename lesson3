@@ -89,33 +89,59 @@ console.log(mainList);
 
 
 
-function  howArray (num) {
-	let depth = num;
-	let randArr = []
-	function randomInt () {
+function  howArray (num, maxLevel) {
+	let randArr = [];
+	let sumArray = 0;
+	let currentLevel;
+	let localMaxLevel = maxLevel;
+
+
+	let randomInt = num => {
 		let rand = 1 + Math.random() * num;
 		return Math.floor(rand);
-	}
+	};
 
-	for (let i = 0; i < num; i++ ) {
-		randArr[i] = [];
-		for (let j = 0; j < randomInt(); j++) {
-			randArr[i][j] = randomInt();
+
+	function generateArr() {
+		let currentArr = [];
+		console.log(localMaxLevel);
+		for (let i = 0; i < randomInt(num); i++){
+
+			if (currentLevel < localMaxLevel) {
+				currentLevel += 1;
+				return currentArr[i] = generateArr();
+			} else {
+				currentArr[i] = randomInt(num);
+			}
 		}
-	}
-	
-	let sumArray = 0;
+		return currentArr;
 
-	function funcSumArray (arr) {
-		if (Array.isArray(arr)) {
-			arr.forEach(function(item, i, arr) {
+		
+	};
+
+	function generateRandomLevelArr() {
+		for (let i = 0; i < randomInt(num); i++) {
+			currentLevel = 0;
+			localMaxLevel = randomInt(maxLevel);
+			randArr[i] = generateArr();
+		}
+
+	};
+	generateRandomLevelArr();
+
+	
+
+	let funcSumArray = arrItem => {
+		if (Array.isArray(arrItem)) {
+			arrItem.forEach(function(item, i, arr) {
 				funcSumArray(item);
 			});
 
 		} else {
-			return	sumArray += arr;
+			return	sumArray += arrItem;
 		}
-	}	
+	};
+
 	funcSumArray(randArr);
 
 	console.log(randArr);
