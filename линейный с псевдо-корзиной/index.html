@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="style.css">
+
+	<title>Линейный калькулятор с корзиной</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+	<script src="scripts.js"></script>
+</head>
+<body>
+	
+	<div class="big-wrapper">
+		<div class="items-wrapper calc">
+			<form action="#">
+				<div class="item-wrapper item">
+					<div class="item__name-item">Название</div>
+					<div class="item__cost-item">343</div>
+					<div class="item__amount-wrapper">
+						<div class="item__minus-amount">-</div>
+						<input type="text" class="item__field-amount" pattern="^[0-9]+$" size="3" name="amount" value="0">
+						<div class="item__plus-amount">+</div>
+					</div>
+				</div>
+			</form>
+
+			<form action="#">
+				<div class="item-wrapper item">
+					<div class="item__name-item">Название</div>
+					<div class="item__cost-item">2342р</div>
+					<div class="item__amount-wrapper">
+						<div class="item__minus-amount">-</div>
+						<input type="text" class="item__field-amount" pattern="^[0-9]+$" size="3" name="amount" value="2">
+						<div class="item__plus-amount">+</div>
+					</div>
+				</div>
+			</form>
+
+
+			<form action="#">
+				<div class="item-wrapper item">
+					<div class="item__name-item">Название</div>
+					<div class="item__cost-item">24р</div>
+					<div class="item__amount-wrapper">
+						<div class="item__minus-amount">-</div>
+						<input type="text" class="item__field-amount" pattern="^[0-9]+$" size="3" name="amount" value="0">
+						<div class="item__plus-amount">+</div>
+					</div>
+				</div>
+			</form>
+
+
+			<form action="#">
+				<div class="item-wrapper item">
+					<div class="item__name-item">Название</div>
+					<div class="item__cost-item">2342р</div>
+					<div class="item__amount-wrapper">
+						<div class="item__minus-amount">-</div>
+						<input type="text" class="item__field-amount" pattern="^[0-9]+$" size="3" name="amount" value="0">
+						<div class="item__plus-amount">+</div>
+					</div>
+				</div>
+			</form>
+		</div>
+
+		<div class="cart-wrapper cart" id="cart">
+			<div class="cart__title">Корзина</div>
+			<div class="cart-wrapper__items">
+
+				<form action="#">
+					<div class="item-wrapper item_cart item-wrapper_cart">
+						<div class="item__name-item item__name-item_cart">Название</div>
+						<div class="item__cost-item item__cost-item_cart">2342р</div>
+						<div class="item__amount-wrapper">
+							<div class="item__minus-amount item__minus-amount_cart">-</div>
+							<input type="text" class="item__field-amount item__field-amount_cart" pattern="^[0-9]+$" size="3" name="amount" value="0">
+							<div class="item__plus-amount item__plus-amount_cart">+</div>
+						</div>
+						<div class="item__remove-item">X</div>
+					</div>
+				</form>
+
+				<form action="#">
+					<div class="item-wrapper item_cart item-wrapper_cart">
+						<div class="item__name-item item__name-item_cart">Название</div>
+						<div class="item__cost-item item__cost-item_cart">2342р</div>
+						<div class="item__amount-wrapper">
+							<div class="item__minus-amount item__minus-amount_cart">-</div>
+							<input type="text" class="item__field-amount item__field-amount_cart" pattern="^[0-9]+$" size="3" name="amount" value="0">
+							<div class="item__plus-amount item__plus-amount_cart">+</div>
+						</div>
+						<div class="item__remove-item">X</div>
+					</div>
+				</form>
+
+				<form action="#">
+					<div class="item-wrapper item_cart item-wrapper_cart">
+						<div class="item__name-item item__name-item_cart">Название</div>
+						<div class="item__cost-item item__cost-item_cart">2342р</div>
+						<div class="item__amount-wrapper">
+							<div class="item__minus-amount item__minus-amount_cart">-</div>
+							<input type="text" class="item__field-amount item__field-amount_cart" pattern="^[0-9]+$" size="3" name="amount" value="0">
+							<div class="item__plus-amount item__plus-amount_cart">+</div>
+						</div>
+						<div class="item__remove-item">X</div>
+					</div>
+				</form>
+
+			</div>
+		</div>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,237 @@
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+body {
+	background: #fff;
+	font-family: 'Roboto', sans-serif;
+
+}
+
+
+.big-wrapper {
+	width: 980px;
+	margin: 0 auto;
+	background-color: #fff;
+	padding: 20px;
+}
+
+.cart {
+	position: relative;
+}
+
+.items-wrapper {
+	width: 100%;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
+	flex-direction: column;
+}
+
+.item-wrapper {
+	width:100%;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	padding: 5px;
+	border: 1px solid green;
+	margin: 5px;
+	box-sizing: border-box;
+}
+
+.item-wrapper:hover {
+	box-shadow: 0 0 4px 2px #e8abab;
+	cursor: pointer;
+}
+
+.item__name-item {
+	width: 70%;
+	flex: 5 0;
+	display: flex;
+    min-height: 40px;
+    align-items: center;
+    border-right: 1px solid black;
+}
+
+.item__cost-item {
+	width: 15%;
+	max-width: 50px;
+	text-align: center;
+	min-height: 40px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+.item__amount-wrapper {
+	flex: 1 0;
+	width: 20%;
+	max-width: 200px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.item__minus-amount,
+.item__plus-amount {
+	border: 1px solid green;
+	width: 30px;
+	height: 30px;
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 30px;
+	color: green;
+}
+
+.item__field-amount {
+    height: 30px;
+    box-sizing: border-box;
+    font-size: 18px;
+    padding: 0 5px;
+    width: 50px;
+}
+
+
+.cart-wrapper {
+	width: 500px;
+	z-index: 1000;
+} 
+
+.item-wrapper_cart {
+	border: none;
+    border-bottom: 1px solid green;
+    margin: 0 0 5px 0;
+  
+}
+
+.item__name-item_cart {
+	font-size: 12px;
+	 min-height: 15px
+}
+
+.item__cost-item_cart {
+	font-size: 12px;
+	 min-height: 15px
+}
+
+.item__plus-amount_cart,
+.item__minus-amount_cart {
+	height: 20px;
+}
+
+.item__field-amount_cart {
+	height: 22px;
+    font-size: 15px;
+}
+
+.item__remove-item {
+	width: 20px;
+	height: 20px;
+	display: flex;
+	margin: 0 5px;
+	justify-content: center;
+	align-items: center;
+	background-color: #e8abab;
+}
+
+.cart-wrapper {
+	border: 1px solid green;
+	padding: 5px;
+	border-radius: 5px;
+}
+
+.cart {
+    position: fixed;
+    left: 100%;
+}
+
+
+
+.cart__title {
+    position: absolute;
+    border: 1px solid green;
+    transform: rotate(-90deg);
+    left: -61px;
+    top: 23px;
+    padding: 10px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    cursor: pointer;
+}
+
+.cart__title:hover {
+	box-shadow: 0 0 4px 2px #e8abab;
+}
+
+.cart_open {
+	left: calc(100% - 510px);
+}
